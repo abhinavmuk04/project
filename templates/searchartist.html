@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Search Results</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{ form.search_query.label }} {{ form.search_query(size=20) }}
+        {{ form.submit() }}
+    </form>
+    <br>
+    {% if results %}
+        <h2>Tracks Found</h2>
+        <ul>
+            {% for album in results %}
+                <li>
+                    <strong>{{ album.name }}</strong> Listeners {{ album.listeners}}<br>
+                    <a href="{{ album.url }}" target="_blank">Preview</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tracks found for the search query.</p>
+    {% endif %}
+{% endblock %}
