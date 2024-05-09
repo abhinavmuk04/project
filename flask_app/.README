@@ -1,0 +1,31 @@
+Description of your final project:
+
+We created a Flask-based application that integrates the Last.fm API to display music for users based on their searches. The platform allows users to explore songs, artists, and albums once they are logged in. The project was built from scratch to ensure robust customization and learning, and to fulfill the course's substantial change requirement.
+
+
+Describe what functionality will only be available to logged-in users:
+
+When a user is not logged in and visits the site, they will only see the home, login, and register pages, and no songs will be displayed on the home page. Once the user registers or logs in, they will see the current trending tracks. They will also see additional pages, including the search tracks page, search artists page, and logout page.
+
+
+List and describe at least 4 forms:
+
+Registration Form: For new users to create an account.
+Login Form: For existing users to access their accounts.
+Search Track Form: Users can search up a specific track name.
+Search Artist Form: Users can search up a specific artist name or group of artists.
+List and describe your routes/blueprints:
+Main Blueprint: Handles authentication-related routes such as registration and login. /register
+/login
+Search Blueprint: Handles search routes for users to search tracks or artists.
+/search (for tracks) /searchar (for artists)
+
+
+Describe what will be stored/retrieved from MongoDB:
+
+User credentials, including username, email, and password
+
+Describe what Python package or API you will use and how it will affect the user experience:
+
+API Used: Last.fm API
+Functionality: Fetches music data based on user searches and provides current top tracks. Impact on User Experience: Directly affects the core functionality of the application by providing results based on user inputs.
